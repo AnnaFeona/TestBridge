@@ -1,10 +1,10 @@
 import { _decorator, Component, Node } from "cc";
 const { ccclass, property } = _decorator;
 
-@ccclass("NewComponent")
-export class NewComponent extends Component {
+@ccclass("CameraController")
+export class CameraController extends Component {
   start() {
-    console.log("script 2", this.node);
+    console.log(this.node.children);
   }
 
   update(deltaTime: number) {}
