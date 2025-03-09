@@ -4,9 +4,12 @@ const { ccclass, property } = _decorator;
 @ccclass("DownloadButtonController")
 export class DownloadButtonController extends Component {
   @property(Node) button: Node = null;
+  @property(Node) settings: Node = null;
 
-  private appStoreUrl: string = "https://apps.apple.com/app/";
-  private playStoreUrl: string = "https://play.google.com/store/apps/";
+  private appStoreUrl: string =
+    "https://apps.apple.com/us/app/ride-master-car-builder-game/id6449224139";
+  private playStoreUrl: string =
+    "https://play.google.com/store/apps/details?id=com.LuB.DeliveryConstruct&hl=en";
   private webUrl: string = "https://google.com";
 
   start() {

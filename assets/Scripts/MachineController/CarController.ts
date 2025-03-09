@@ -10,7 +10,7 @@ export class CarController extends Component {
       Input.EventType.TOUCH_START,
       (e) => {
         this.move();
-        console.log(this, e);
+        // console.log(this, e);
       },
       this
     );
