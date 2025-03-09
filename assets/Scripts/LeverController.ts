@@ -1,6 +1,5 @@
 import { _decorator, Component, Node, tween, UITransform, Vec3 } from "cc";
-import { SizeInterface } from "../model";
-import { gameState } from "../state";
+import { gameState } from "./state";
 const { ccclass, property } = _decorator;
 
 @ccclass("LeverController")
@@ -117,8 +116,7 @@ export class LeverController extends Component {
   }
 
   onTouchEnd(e) {
-    gameState.isLeverActive = false;
-    console.log(e);
+    // gameState.isLeverActive = false;
   }
 
   updateSpeed() {
@@ -128,7 +126,5 @@ export class LeverController extends Component {
     const normalisedY = (leverY - minY) / (maxY - minY);
 
     gameState.carSpeed = minSpeed + (maxSpeed - minSpeed) * normalisedY;
-
-    console.log(gameState.carSpeed);
   }
 }
