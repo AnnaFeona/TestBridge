@@ -1,6 +1,7 @@
 import {
   _decorator,
   Camera,
+  Collider,
   Component,
   Input,
   input,
@@ -21,6 +22,11 @@ export class CarController extends Component {
       this.rigidBody = this.node.getComponent(RigidBody);
     }
     this.rigidBody.mass = gameState.carMass;
+    this.rigidBody.useCCD = true;
+
+    const material = this.node.getComponent(Collider).sharedMaterial;
+    material.friction = 1;
+    material.restitution = 0.1
   }
 
   update(deltaTime: number) {

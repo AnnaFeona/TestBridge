@@ -1,9 +1,9 @@
 import {
   _decorator,
   BoxCollider,
-  Collider,
   Component,
   Node,
+  PhysicsSystem,
   RigidBody,
   Vec3,
 } from "cc";
@@ -16,51 +16,55 @@ export class RoadController extends Component {
   @property(Node) baseBridgeBlock: Node = null;
 
   protected onLoad(): void {
-    this.node.children.forEach((childNode) => {
-      const baseCollider = this.baseBridgeBlock.getComponent(BoxCollider);
+    this.node.children
+      .filter((item) => item.name.includes(NodesName.BridgeBlock))
+      .forEach((childNode, index) => {
+        const baseCollider = this.baseBridgeBlock.getComponent(BoxCollider);
 
-      if (childNode.name.includes(NodesName.BridgeBlock)) {
-        const childNodeId = +childNode.name.split(".")[1];
+        let rigidBody = childNode.getComponent(RigidBody);
+        let collider = childNode.getComponent(BoxCollider);
 
-        if (!childNode.getComponent(RigidBody)) {
-          const rigidBody = childNode.addComponent(RigidBody);
+        if (!rigidBody) {
+          rigidBody = childNode.addComponent(RigidBody);
+
+          const factor = Math.ceil(index / 59);
           rigidBody.type = RigidBody.Type.STATIC;
-          rigidBody.mass = 15;
-          rigidBody.linearDamping = 0;
-          childNodeId < 31
-            ? gameState.bridgeBlockMass
-            : gameState.bridgeBlockMass * 100;
+
+          rigidBody.mass = gameState.bridgeBlockMass / (factor + 1);
+          rigidBody.linearFactor = new Vec3(1, 1, 1);
+
+          const gravityBoost = new Vec3(0, -index * 100, 0);
+          rigidBody.applyForce(gravityBoost, new Vec3(0, 0, 0));
+          rigidBody.angularDamping = 0.5;
         }
 
-        if (!childNode.getComponent(BoxCollider)) {
-          const collider = childNode.addComponent(BoxCollider);
+        if (!collider) {
+          collider = childNode.addComponent(BoxCollider);
           collider.size = baseCollider.size;
 
           collider.on(
-            "onCollisionStay",
+            "onCollisionEnter",
             (e) => {
               if (e.otherCollider.node.name === NodesName.Car) {
-                const rigidBody = childNode.getComponent(RigidBody);
-
                 rigidBody.type = RigidBody.Type.DYNAMIC;
-                const gravityBoost = new Vec3(0, -childNodeId * 3, 0);
-                rigidBody.applyLocalImpulse(gravityBoost);
-                if (childNodeId > 30) {
-                  rigidBody.applyForce(gravityBoost);
-                }
+
+                const { node } = e.otherCollider;
+                const carRigitBody = node.getComponent(RigidBody);
+                carRigitBody.linearDampingn = (4 * index) / 600 + 0.6;
+
+                const speedFactor = gameState.carSpeed / gameState.maxSpeed;
 
                 gameState.carSpeed =
-                  gameState.carSpeed > 0.5 ? gameState.carSpeed - 0.2 : 0.5;
+                  (gameState.maxSpeed - index * 0.011) * speedFactor;
               }
             },
             this
           );
         }
-      }
-    });
+      });
   }
 
-  start() {}
+  //   start() {}
 
   update(deltaTime: number) {}
 }

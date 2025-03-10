@@ -1,10 +1,10 @@
 export const gameState = {
   carSpeed: 0,
-  carMass: 24,
+  carMass: 30,
   minSpeed: 0,
-  maxSpeed: 25,
+  maxSpeed: 20,
   isLeverActive: false,
   isGameStarted: false,
   isFinished: false,
-  bridgeBlockMass: 25,
+  bridgeBlockMass: 100,
 };
