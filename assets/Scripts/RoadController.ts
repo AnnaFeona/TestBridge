@@ -37,7 +37,7 @@ export class RoadController extends Component {
           collider.size = baseCollider.size;
 
           collider.on(
-            "onCollisionEnter",
+            "onCollisionStay",
             (e) => {
               if (e.otherCollider.node.name === NodesName.Car) {
                 const rigidBody = childNode.getComponent(RigidBody);
@@ -48,6 +48,9 @@ export class RoadController extends Component {
                 if (childNodeId > 30) {
                   rigidBody.applyForce(gravityBoost);
                 }
+
+                gameState.carSpeed =
+                  gameState.carSpeed > 0.5 ? gameState.carSpeed - 0.2 : 0.5;
               }
             },
             this

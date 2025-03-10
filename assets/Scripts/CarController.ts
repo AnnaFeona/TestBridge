@@ -39,7 +39,6 @@ export class CarController extends Component {
     this.rigidBody.applyImpulse(this.force);
 
     // this.rigidBody.applyForce(this.force);
-
     // this.node.position = this.node.position.add(new Vec3(x, 0, 0));
   }
 }

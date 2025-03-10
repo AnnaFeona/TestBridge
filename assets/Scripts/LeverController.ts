@@ -1,4 +1,12 @@
-import { _decorator, Component, Node, tween, UITransform, Vec3 } from "cc";
+import {
+  _decorator,
+  Component,
+  Node,
+  Tween,
+  tween,
+  UITransform,
+  Vec3,
+} from "cc";
 import { gameState } from "./state";
 const { ccclass, property } = _decorator;
 
@@ -11,12 +19,12 @@ export class LeverController extends Component {
   private minY: number;
   private maxY: number;
   private isTouched: boolean = false;
-  // private leverSize: { x: Number; y: Number; width: Number; height: Number };
-  // private handSize: { x: Number; y: Number; width: Number; height: Number };
-  // private platformSize: { x: Number; y: Number; width: Number; height: Number };
 
   private animationDuration = 1;
   private animationDelay = 1.5;
+
+  private leverTween: Tween<Node> = null;
+  private handTween: Tween<Node> = null;
 
   onLoad() {
     this.node.on(Node.EventType.TOUCH_START, this.onTouchStart, this);
@@ -27,19 +35,6 @@ export class LeverController extends Component {
   start() {
     const platformHeight = this.node.parent.getComponent(UITransform).height;
     const leverHeight = this.lever.getComponent(UITransform).height;
-
-    // const getSize = (node: Node): SizeInterface => {
-    //   return {
-    //     x: node.position.x,
-    //     y: this.lever.position.y,
-    //     width: this.lever.getComponent(UITransform).width,
-    //     height: this.lever.getComponent(UITransform).height,
-    //   };
-    // };
-
-    // this.leverSize = getSize(this.lever);
-    // this.platformSize = getSize(this.platform);
-    // this.handSize = getSize(this.hand);
 
     this.minY = -platformHeight / 2 + leverHeight / 2;
     this.maxY = platformHeight / 2 - leverHeight / 2;
@@ -78,7 +73,7 @@ export class LeverController extends Component {
         });
     };
 
-    moveNode(this.lever).delay(this.animationDelay).start();
+    this.leverTween = moveNode(this.lever).delay(this.animationDelay).start();
     moveNode(this.hand)
       .call(() => {
         this.hand.active = false;
@@ -93,6 +88,10 @@ export class LeverController extends Component {
   stopAnimation() {
     this.isTouched = true;
     if (this.hand) this.hand.active = false;
+    if (this.leverTween) {
+      this.leverTween.stop();
+      this.leverTween = null;
+    }
   }
 
   onTouchStart() {
@@ -115,15 +114,14 @@ export class LeverController extends Component {
     this.updateSpeed();
   }
 
-  onTouchEnd(e) {
-    // gameState.isLeverActive = false;
-  }
+  onTouchEnd(e) {}
 
   updateSpeed() {
     const { minSpeed, maxSpeed } = gameState;
     const { minY, maxY } = this;
-    const leverY = this.lever.position.y;
-    const normalisedY = (leverY - minY) / (maxY - minY);
+    const { y } = this.lever.position;
+    // const leverY = this.lever.position.y;
+    const normalisedY = (y - minY) / (maxY - minY);
 
     gameState.carSpeed = minSpeed + (maxSpeed - minSpeed) * normalisedY;
   }
