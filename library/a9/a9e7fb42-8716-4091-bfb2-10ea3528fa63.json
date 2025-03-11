@@ -1,0 +1,75 @@
+{
+  "__type__": "cc.JsonAsset",
+  "_name": "b5d6115f-0370-4d7c-aad3-c194cc71cf98",
+  "_objFlags": 0,
+  "_native": "",
+  "json": [
+    1,
+    [
+      "c2chXYaDVLaL+7verGEAwE"
+    ],
+    [
+      "_effectAsset"
+    ],
+    [
+      [
+        "cc.Material",
+        [
+          "_name",
+          "_props",
+          "_states",
+          "_defines"
+        ],
+        -1
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        1,
+        2,
+        3,
+        5
+      ]
+    ],
+    [
+      [
+        0,
+        "default-spine-material",
+        [
+          {}
+        ],
+        [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "USE_TEXTURE": true,
+            "CC_USE_EMBEDDED_ALPHA": false,
+            "IS_GRAY": false
+          }
+        ]
+      ]
+    ],
+    0,
+    0,
+    [
+      0
+    ],
+    [
+      0
+    ],
+    [
+      0
+    ]
+  ]
+}

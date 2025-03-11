@@ -1,0 +1,119 @@
+{
+  "__type__": "cc.JsonAsset",
+  "_name": "531c76ec-e3c3-4c42-aada-da3d5c183d4b@f9941",
+  "_objFlags": 0,
+  "_native": "",
+  "json": [
+    1,
+    [
+      "53HHbs48NMQqra2j1cGD1L@6c48a"
+    ],
+    [
+      "_textureSource"
+    ],
+    [
+      "cc.SpriteFrame"
+    ],
+    0,
+    [
+      {
+        "name": "draggable_plate",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 314,
+          "height": 459
+        },
+        "offset": {
+          "x": 0,
+          "y": 0
+        },
+        "originalSize": {
+          "width": 314,
+          "height": 459
+        },
+        "rotated": false,
+        "capInsets": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "vertices": {
+          "rawPosition": [
+            -157,
+            -229.5,
+            0,
+            157,
+            -229.5,
+            0,
+            -157,
+            229.5,
+            0,
+            157,
+            229.5,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            0,
+            459,
+            314,
+            459,
+            0,
+            0,
+            314,
+            0
+          ],
+          "nuv": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "minPos": {
+            "x": -157,
+            "y": -229.5,
+            "z": 0
+          },
+          "maxPos": {
+            "x": 157,
+            "y": 229.5,
+            "z": 0
+          }
+        },
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "meshType": 0
+      }
+    ],
+    [
+      0
+    ],
+    0,
+    [
+      0
+    ],
+    [
+      0
+    ],
+    [
+      0
+    ]
+  ]
+}

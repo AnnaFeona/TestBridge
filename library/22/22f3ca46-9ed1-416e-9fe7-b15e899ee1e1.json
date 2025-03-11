@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.JsonAsset",
+  "_name": "b3f2ba44-cb2d-49e8-818e-8346579847e9@7d6ab",
+  "_objFlags": 0,
+  "_native": "",
+  "json": [
+    1,
+    0,
+    0,
+    [
+      "cc.Texture2D"
+    ],
+    0,
+    [
+      {
+        "base": "2,2,0,0,0,0",
+        "mipmaps": [
+          "b38rpEyy1J6IGOg0ZXmEfp@48b02"
+        ]
+      }
+    ],
+    [
+      0
+    ],
+    0,
+    [],
+    [],
+    []
+  ]
+}

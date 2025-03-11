@@ -1,0 +1,71 @@
+{
+  "__type__": "cc.JsonAsset",
+  "_name": "f0416e68-0200-4b77-a926-4f9d16e494da",
+  "_objFlags": 0,
+  "_native": "",
+  "json": [
+    1,
+    [
+      "1cAq5vRJJJFbj4dJKjseTN"
+    ],
+    [
+      "_effectAsset"
+    ],
+    [
+      [
+        "cc.Material",
+        [
+          "_name",
+          "_props",
+          "_states",
+          "_defines"
+        ],
+        -1
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        1,
+        2,
+        3,
+        5
+      ]
+    ],
+    [
+      [
+        0,
+        "ui-graphics-material",
+        [
+          {}
+        ],
+        [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        [
+          {}
+        ]
+      ]
+    ],
+    0,
+    0,
+    [
+      0
+    ],
+    [
+      0
+    ],
+    [
+      0
+    ]
+  ]
+}

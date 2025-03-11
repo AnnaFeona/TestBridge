@@ -1,0 +1,71 @@
+{
+  "__type__": "cc.JsonAsset",
+  "_name": "c0143906-9aed-447e-9436-2ae8512d1b6e",
+  "_objFlags": 0,
+  "_native": "",
+  "json": [
+    1,
+    [
+      "d1NGQ2rJZCcbhjH0/erZWw"
+    ],
+    [
+      "_effectAsset"
+    ],
+    [
+      [
+        "cc.Material",
+        [
+          "_name",
+          "_props",
+          "_states",
+          "_defines"
+        ],
+        -1
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        1,
+        2,
+        3,
+        5
+      ]
+    ],
+    [
+      [
+        0,
+        "default-particle-material",
+        [
+          {}
+        ],
+        [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        [
+          {}
+        ]
+      ]
+    ],
+    0,
+    0,
+    [
+      0
+    ],
+    [
+      0
+    ],
+    [
+      0
+    ]
+  ]
+}

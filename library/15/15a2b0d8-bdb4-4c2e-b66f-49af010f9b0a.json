@@ -1,0 +1,75 @@
+{
+  "__type__": "cc.JsonAsset",
+  "_name": "efe8e2a3-eace-427b-b4f1-cb8a937ec77d",
+  "_objFlags": 0,
+  "_native": "",
+  "json": [
+    1,
+    [
+      "609xlc7CpF67qUiVX2DoHQ"
+    ],
+    [
+      "_effectAsset"
+    ],
+    [
+      [
+        "cc.Material",
+        [
+          "_name",
+          "_props",
+          "_states",
+          "_defines"
+        ],
+        -1
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        1,
+        2,
+        3,
+        5
+      ]
+    ],
+    [
+      [
+        0,
+        "ui-sprite-gray-material",
+        [
+          {}
+        ],
+        [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "USE_TEXTURE": true,
+            "CC_USE_EMBEDDED_ALPHA": false,
+            "IS_GRAY": true
+          }
+        ]
+      ]
+    ],
+    0,
+    0,
+    [
+      0
+    ],
+    [
+      0
+    ],
+    [
+      0
+    ]
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "__type__": "cc.JsonAsset",
+  "_name": "8f525a47-a7da-45e6-82df-b70ace3511fa@b4e6b",
+  "_objFlags": 0,
+  "_native": "",
+  "json": [
+    1,
+    [
+      "8ba4G0TLVJy7Q9fRZwuVGE@6c48a",
+      "f6SJZOjTJB/JrJeh5xTdF7"
+    ],
+    [
+      "mainTexture",
+      "_effectAsset"
+    ],
+    [
+      [
+        "cc.Material",
+        [
+          "_states",
+          "_defines",
+          "_props"
+        ],
+        1,
+        12
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    [
+      [
+        0,
+        [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "DCC_APP_NAME": 2,
+            "USE_ALBEDO_MAP": true,
+            "HAS_EXPORTED_METALLIC": true
+          },
+          {},
+          {}
+        ],
+        [
+          [
+            [
+              {
+                "shininessExponent": 25,
+                "specularFactor": 0.25,
+                "transparencyFactor": 0
+              },
+              "mainColor",
+              8,
+              [
+                4,
+                4293388263
+              ],
+              "mainTexture",
+              6,
+              0
+            ],
+            {},
+            {}
+          ],
+          11,
+          0,
+          0
+        ]
+      ]
+    ],
+    0,
+    0,
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      1
+    ]
+  ]
+}

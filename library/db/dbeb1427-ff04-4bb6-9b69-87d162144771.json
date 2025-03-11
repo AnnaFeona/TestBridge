@@ -1,0 +1,85 @@
+{
+  "__type__": "cc.JsonAsset",
+  "_name": "bcd64cc6-2dd9-43f6-abbe-66318d332032",
+  "_objFlags": 0,
+  "_native": "",
+  "json": [
+    1,
+    [
+      "a3zQCfCrBCDZJ4uf2rk5u8"
+    ],
+    [
+      "_effectAsset"
+    ],
+    [
+      [
+        "cc.Material",
+        [
+          "_name",
+          "_states",
+          "_defines",
+          "_props"
+        ],
+        0,
+        12
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ],
+    [
+      [
+        0,
+        "missing-effect-material",
+        [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "USE_COLOR": true
+          }
+        ],
+        [
+          [
+            [
+              {},
+              "mainColor",
+              8,
+              [
+                4,
+                4278255615
+              ]
+            ]
+          ],
+          11
+        ]
+      ]
+    ],
+    0,
+    0,
+    [
+      0
+    ],
+    [
+      0
+    ],
+    [
+      0
+    ]
+  ]
+}
