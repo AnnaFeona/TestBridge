@@ -12,6 +12,7 @@ import {
 } from "cc";
 import { gameState } from "./state";
 import { AnimationName, NodesName } from "./model";
+import { GameOver } from "./GameOver";
 const { ccclass, property } = _decorator;
 
 @ccclass("CarController")
@@ -20,6 +21,7 @@ export class CarController extends Component {
   @property(BoxCollider) carCollider: BoxCollider = null;
   @property(Camera) mainCamera: Camera = null;
   @property(Node) carBody: Node;
+  @property(Node) gameOverNode: Node;
 
   private force: Vec3 = new Vec3(0, 0, 0);
 
@@ -59,7 +61,7 @@ export class CarController extends Component {
     }
   }
 
-  moveCar(dt: number) {
+  moveCar() {
     const { carSpeed } = gameState;
     this.force = new Vec3(carSpeed, 0, 0);
 
@@ -79,6 +81,7 @@ export class CarController extends Component {
       gameState.isFinished = false;
       this.enadlePhisics();
       this.animation.play(AnimationName.CarDestroy);
+      this.completeRace();
     }
   }
 
@@ -91,5 +94,13 @@ export class CarController extends Component {
     this.rigidBody.useGravity = false;
 
     this.rigidBody.mass = 1000;
+  }
+
+  completeRace() {
+    const gameOverScript = this.gameOverNode.getComponent(
+      "GameOver",
+    ) as GameOver;
+
+    gameOverScript.gameOver();
   }
 }
