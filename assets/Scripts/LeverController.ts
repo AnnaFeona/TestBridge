@@ -39,15 +39,8 @@ export class LeverController extends Component {
     this.minY = -platformHeight / 2 + leverHeight / 2;
     this.maxY = platformHeight / 2 - leverHeight / 2;
 
-    console.log(this.minY, this.maxY);
-
     this.startAnimation();
   }
-
-  // update(deltaTime: number) {
-  //   if (this.isTouched) {
-  //   }
-  // }
 
   startAnimation() {
     if (!this.hand || !this.lever) return;
@@ -120,7 +113,6 @@ export class LeverController extends Component {
     const { minSpeed, maxSpeed } = gameState;
     const { minY, maxY } = this;
     const { y } = this.lever.position;
-    // const leverY = this.lever.position.y;
     const normalisedY = (y - minY) / (maxY - minY);
 
     gameState.carSpeed = minSpeed + (maxSpeed - minSpeed) * normalisedY;

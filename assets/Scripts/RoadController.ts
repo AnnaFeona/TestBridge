@@ -64,7 +64,5 @@ export class RoadController extends Component {
       });
   }
 
-  //   start() {}
-
   update(deltaTime: number) {}
 }
