@@ -95,7 +95,7 @@ export class LeverController extends Component {
   }
 
   onTouchMove(e) {
-    if (!this.isTouched) return;
+    if (!this.isTouched || gameState.isFinished) return;
 
     let delta = e.getDelta();
     let newPos = this.node.position.clone();

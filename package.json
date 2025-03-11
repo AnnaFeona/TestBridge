@@ -15,5 +15,6 @@
   "scripts": {
     "lint": "eslint ./assets/**/*.ts",
     "lint:fix": "eslint ./assets/**/*.ts --fix"
-  }
+  },
+  "description": ""
 }

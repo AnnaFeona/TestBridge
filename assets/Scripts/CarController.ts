@@ -87,5 +87,9 @@ export class CarController extends Component {
       part.addComponent(RigidBody);
       part.getComponent(BoxCollider).isTrigger = false;
     });
+
+    this.rigidBody.useGravity = false;
+
+    this.rigidBody.mass = 1000;
   }
 }
