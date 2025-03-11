@@ -52,9 +52,9 @@ export class CarController extends Component {
   }
 
   update(deltaTime: number) {
-    const { isLeverActive } = gameState;
+    const { isLeverActive, isFinished } = gameState;
 
-    if (isLeverActive) {
+    if (isLeverActive && !isFinished) {
       this.moveCar(deltaTime);
     }
   }
@@ -63,7 +63,9 @@ export class CarController extends Component {
     const { carSpeed } = gameState;
     this.force = new Vec3(carSpeed, 0, 0);
 
-    this.rigidBody.applyImpulse(this.force);
+    if (!gameState.isFinished) {
+      this.rigidBody.applyImpulse(this.force);
+    }
   }
 
   onCollision(e: ICollisionEvent) {
@@ -74,6 +76,7 @@ export class CarController extends Component {
 
       this.isGameOver = true;
       gameState.carSpeed = 0;
+      gameState.isFinished = false;
       this.enadlePhisics();
       this.animation.play(AnimationName.CarDestroy);
     }

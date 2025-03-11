@@ -7,4 +7,5 @@ export const gameState = {
   isGameStarted: false,
   isFinished: false,
   bridgeBlockMass: 100,
+  scoreCouter: 0,
 };

@@ -110,11 +110,13 @@ export class LeverController extends Component {
   onTouchEnd() {}
 
   updateSpeed() {
-    const { minSpeed, maxSpeed } = gameState;
+    const { minSpeed, maxSpeed, isFinished } = gameState;
     const { minY, maxY } = this;
     const { y } = this.lever.position;
     const normalisedY = (y - minY) / (maxY - minY);
 
-    gameState.carSpeed = minSpeed + (maxSpeed - minSpeed) * normalisedY;
+    gameState.carSpeed = !isFinished
+      ? minSpeed + (maxSpeed - minSpeed) * normalisedY
+      : 0;
   }
 }
