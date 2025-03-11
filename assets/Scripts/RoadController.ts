@@ -1,12 +1,4 @@
-import {
-  _decorator,
-  BoxCollider,
-  Component,
-  Node,
-  PhysicsSystem,
-  RigidBody,
-  Vec3,
-} from "cc";
+import { _decorator, BoxCollider, Component, Node, RigidBody, Vec3 } from "cc";
 import { gameState } from "./state";
 import { NodesName } from "./model";
 const { ccclass, property } = _decorator;
