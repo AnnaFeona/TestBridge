@@ -107,7 +107,7 @@ export class LeverController extends Component {
     this.updateSpeed();
   }
 
-  onTouchEnd(e) {}
+  onTouchEnd() {}
 
   updateSpeed() {
     const { minSpeed, maxSpeed } = gameState;

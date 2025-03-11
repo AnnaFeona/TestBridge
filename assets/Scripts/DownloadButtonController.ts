@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { _decorator, Component, Node, sys } from "cc";
 const { ccclass, property } = _decorator;
 

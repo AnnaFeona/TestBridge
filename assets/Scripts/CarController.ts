@@ -61,7 +61,6 @@ export class CarController extends Component {
 
   moveCar(dt: number) {
     const { carSpeed } = gameState;
-    const x = carSpeed * dt;
     this.force = new Vec3(carSpeed, 0, 0);
 
     this.rigidBody.applyImpulse(this.force);
@@ -81,7 +80,7 @@ export class CarController extends Component {
   }
 
   enadlePhisics() {
-    const parts = this.carBody.children.forEach((part) => {
+    this.carBody.children.forEach((part) => {
       part.addComponent(RigidBody);
       part.getComponent(BoxCollider).isTrigger = false;
     });

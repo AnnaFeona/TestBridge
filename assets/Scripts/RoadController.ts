@@ -50,7 +50,7 @@ export class RoadController extends Component {
                   (gameState.maxSpeed - index * 0.011) * speedFactor;
               }
             },
-            this
+            this,
           );
         }
       });

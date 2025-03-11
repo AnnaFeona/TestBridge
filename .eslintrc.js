@@ -17,17 +17,17 @@ module.exports = {
   },
   plugins: ["@typescript-eslint", "prettier"],
   rules: {
-    "prettier/prettier": "error", // Ошибка, если код не соответствует Prettier
-    "no-unused-vars": ["warn", { argsIgnorePattern: "^_" }], // Предупреждение, игнорируем переменные с _
-    "no-console": "warn", // Консольные логи разрешены, но выдадут предупреждение
-    "no-debugger": "warn", // Предупреждение при использовании debugger
-    "@typescript-eslint/no-explicit-any": "warn", // Разрешаем `any`, но предупреждаем
-    "@typescript-eslint/explicit-module-boundary-types": "off", // Не требует явного указания типа у функций
-    "@typescript-eslint/no-non-null-assertion": "off", // Разрешаем `!` (non-null assertion)
-    "@typescript-eslint/ban-ts-comment": "off", // Разрешаем @ts-ignore
-    "@typescript-eslint/no-empty-function": "off", // Разрешаем пустые функции (например, заглушки)
-    "no-multiple-empty-lines": ["warn", { max: 1 }], // Ограничение пустых строк в коде
-    "no-trailing-spaces": "warn", // Предупреждение о лишних пробелах
-    "eol-last": ["warn", "always"], // Требует пустую строку в конце файла
+    "prettier/prettier": "error",
+    "no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+    "no-console": "warn",
+    "no-debugger": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "no-multiple-empty-lines": ["warn", { max: 1 }],
+    "no-trailing-spaces": "warn",
+    "eol-last": ["warn", "always"],
   },
 };
